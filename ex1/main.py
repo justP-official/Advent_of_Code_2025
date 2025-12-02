@@ -1,19 +1,19 @@
 def rotate_left(pos, value):
-    tmp = pos - value
+    result = pos - value
 
-    while tmp < 0:
-        tmp += 100
+    while result < 0:
+        result += 100
     
-    return tmp
+    return result
 
 def rotate_right(pos, value):
-    tmp = pos + value
+    result = pos + value
 
     
-    while tmp >= 100:
-        tmp -= 100
+    if result >= 100:
+        result %= 100
 
-    return tmp
+    return result
 
 
 OPERATORS = {
